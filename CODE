@@ -1,0 +1,76 @@
+import random
+print("**********WELCOME TO THE GAME: ROCK,PAPER,SCISSORS**********")
+print("IF: ROCK PRESS 1\n PAPER PRESS 2\n SCISSORS PRESS 3")
+print("**************************************")
+choices = ["ROCK","PAPER","SCISSORS"]
+chances = 1
+user = 0
+cpu = 0
+while(chances<=10):
+    a = int(input("ENTER YOUR CHOICE HERE:"))
+    if a==1:
+        print("YOU CHOSE ROCK")
+    elif a==2:
+        print("YOU CHOSE PAPER")
+    elif a==3:
+        print("YOU CHOSE SCISSORS")
+    else:
+        print("ENTER A VALID INPUT")
+
+    b = random.choice(choices)
+    print(f"COMPUTER CHOSE {b}")
+
+
+
+    if a==1 and b=="SCISSORS":
+        print("ROCK BEATS SCISSORS.YOU WIN")
+        print("**************************************")
+        user = user+1
+    elif a==2 and b=="ROCK":
+        print("PAPER COVERS ROCK.YOU WIN")
+        print("**************************************")
+        user = user + 1
+    elif a==3 and b=="PAPER":
+        print("SCISSOR CUTS PAPER.YOU WIN")
+        print("**************************************")
+        user = user + 1
+    elif a==1 and b=="PAPER":
+        print("PAPER COVERS ROCK.YOU LOSE")
+        print("**************************************")
+        cpu = cpu+1
+    elif a==2 and b=="SCISSORS":
+        print("SCISSORS CUT PAPER.YOU LOSE")
+        print("**************************************")
+        cpu = cpu + 1
+    elif a==3 and b=="ROCK":
+        print("ROCK SMASHES SCISSORS.YOU LOSE")
+        print("**************************************")
+        cpu = cpu + 1
+    else:
+        print("YOU AND COMPUTER DREW.")
+        print("**************************************")
+    while (chances == 10):
+        print("**************************************")
+        print("**************************************")
+        print("**********GAME OVER**********")
+        print("**************************************")
+        print("**************************************")
+        print("**************************************")
+        break
+
+    chances = chances + 1
+
+
+
+print(f"SCORES ARE\n USER: {user} \n CPU :{cpu}")
+if user > cpu:
+    print("*****CONGRATS YOU WON*****")
+elif user < cpu:
+    print("*****SORRY COMPUTER WON*****")
+else:
+    print("*****WOW GAME IS DRAWN *****")
+
+
+
+
+
